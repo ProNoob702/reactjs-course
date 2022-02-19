@@ -1,23 +1,87 @@
-import logo from "./logo.svg";
 import "./styles/App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="AppHeader">
+        <h6 className="AppHeaderTitle">MyPortfolio</h6>
       </header>
+      <main className="AppMain">
+        <div className="AppMainUpperSide">
+          <span className="UserFullName">Saydou keita</span>
+          <img
+            className="UserAvatar"
+            alt="profile img"
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+          ></img>
+        </div>
+        <p className="UserDesciption">
+          One morning, when Gregor Samsa woke from troubled dreams, he found
+          himself transformed in his bed into a horrible vermin. He lay on his
+          armour-like back, and if he lifted his head a little he could see his
+          brown belly, slightly domed and divided by arches into stiff sections.
+          The bedding was hardly able to cover it and seemed ready to slide off
+          any moment. His many legs, pitifully thin compared with the size of
+          the rest of him, waved about helplessly as he looked. "What's happened
+          to me?" he thought. It wasn't a dream. His room, a proper human room
+          although a little too small, lay peacefully between its four familiar
+          walls. A collection of textile samples lay spread out on the table -
+          Samsa was a travelling salesman - and above it there hung a picture
+          that he had recently cut out of an illustrated magazine and housed in
+          a nice, gilded frame. It showed a lady fitted out with a fur hat and
+          fur boa who sat upright, raising a heavy fur muff that covered the
+          whole of her lower arm towards the viewer. Gregor then turned to look
+          out the window at the dull weather. DropsOne morning, when Gregor
+          Samsa woke from troubled dreams, he found himself transformed in his
+          bed into a horrible vermin. He lay on his armour-like back, and if he
+          lifted his head a little he could see his brown belly, slightly domed
+          and divided by arches into stiff sections. The bedding was hardly able
+          to cover it and seemed ready to slide off any moment. His many legs,
+          pitifully thin compared with the size of the rest of him, waved about
+          helplessly as he looked. "What's happened to me?" he thought. It
+          wasn't a dream. His room, a proper human room although a little too
+          small, lay peacefully between its four familiar walls. A collection of
+          textile samples lay spread out on the table - Samsa was a travelling
+          salesman - and above it there hung a picture that he had recently cut
+          out of an illustrated magazine and housed in a nice, gilded frame. It
+          showed a lady fitted out with a fur hat and fur boa who sat upright,
+          raising a heavy fur muff that covered the whole of her lower arm
+          towards the viewer. Gregor then turned to look out the window at the
+          DropsOne morning, when Gregor Samsa woke from troubled dreams, he
+          found himself transformed in his bed into a horrible vermin. He lay on
+          his armour-like back, and if he lifted his head a little he could see
+          his brown belly, slightly domed and divided by arches into stiff
+          sections. The bedding was hardly able to cover it and seemed ready to
+          slide off any moment. His many legs, pitifully thin compared with the
+          size of the rest of him, waved about helplessly as he looked. "What's
+          happened to me?" he thought. It wasn't a dream. His room, a proper
+          human room although a little too small, lay peacefully between its
+          four familiar walls. A collection of textile samples lay spread out on
+          the table - Samsa was a travelling salesman - and above it there hung
+          a picture that he had recently cut out of an illustrated magazine and
+          housed in a nice, gilded frame. It showed a lady fitted out with a fur
+          hat and fur boa who sat upright, raising a heavy fur muff that covered
+          the whole of her lower arm towards the viewer. Gregor then turned to
+          look out the window at the dull weather. DropsOne morning, when Gregor
+          Samsa woke from troubled dreams, he found himself transformed in his
+          bed into a horrible vermin. He lay on his armour-like back, and if he
+          lifted his head a little he could see his brown belly, slightly domed
+          and divided by arches into stiff sections. The bedding was hardly able
+          to cover it and seemed ready to slide off any moment. His many legs,
+          pitifully thin compared with the size of the rest of him, waved about
+          helplessly as he looked. "What's happened to me?" he thought. It
+          wasn't a dream. His room, a proper human room although a little too
+          small, lay peacefully between its four familiar walls. A collection of
+          textile samples lay spread out on the table - Samsa was a travelling
+          salesman - and above it there hung a picture that he had recently cut
+          out of an illustrated magazine and housed in a nice, gilded frame. It
+          showed a lady fitted out with a fur hat and fur boa who sat upright,
+          raising a heavy fur muff that covered the whole of her lower arm
+          towards the viewer. Gregor then turned to look out the window at the
+          Drops
+        </p>
+      </main>
+      <footer className="AppFooter">Copyright MyPortfolio</footer>
     </div>
   );
 }
