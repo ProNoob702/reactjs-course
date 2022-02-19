@@ -3,14 +3,10 @@ import "../styles/UserProfile.css";
 export const UserProfile = () => {
   return (
     <div className="UserProfile">
-      <div className="UserProfile__UpperSide">
-        <span className="UserProfile__FullName">Saydou keita</span>
-        <img
-          className="UserProfile__Avatar"
-          alt="profile img"
-          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-        ></img>
-      </div>
+      <UserProfileUpperSide
+        fullName="ahmadou bangoura"
+        avatarSrc="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+      />
       <p className="UserProfile__Desciption">
         One morning, when Gregor Samsa woke from troubled dreams, he found
         himself transformed in his bed into a horrible vermin. He lay on his
@@ -75,6 +71,19 @@ export const UserProfile = () => {
         arm towards the viewer. Gregor then turned to look out the window at the
         Drops
       </p>
+    </div>
+  );
+};
+
+const UserProfileUpperSide = (props) => {
+  return (
+    <div className="UserProfile__UpperSide">
+      <span className="UserProfile__FullName">{props.fullName}</span>
+      <img
+        className="UserProfile__Avatar"
+        alt="profile img"
+        src={props.avatarSrc}
+      ></img>
     </div>
   );
 };
