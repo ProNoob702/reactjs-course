@@ -1,0 +1,25 @@
+.UserProfileUpperSide {
+  text-align: center;
+}
+
+.UserProfileUpperSide * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.UserFullName {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 50px;
+}
+
+.UserAvatar {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+}
+
+.UserDesciption {
+  padding: 0 25%;
+}
