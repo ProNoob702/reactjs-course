@@ -3,15 +3,15 @@ import "../styles/UserProfile.css";
 export const UserProfile = () => {
   return (
     <div className="UserProfile">
-      <div className="UserProfileUpperSide">
-        <span className="UserFullName">Saydou keita</span>
+      <div className="UserProfile__UpperSide">
+        <span className="UserProfile__FullName">Saydou keita</span>
         <img
-          className="UserAvatar"
+          className="UserProfile__Avatar"
           alt="profile img"
           src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
         ></img>
       </div>
-      <p className="UserDesciption">
+      <p className="UserProfile__Desciption">
         One morning, when Gregor Samsa woke from troubled dreams, he found
         himself transformed in his bed into a horrible vermin. He lay on his
         armour-like back, and if he lifted his head a little he could see his
