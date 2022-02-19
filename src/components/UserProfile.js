@@ -2,7 +2,7 @@ import "../styles/UserProfile.css";
 
 export const UserProfile = () => {
   return (
-    <>
+    <div className="UserProfile">
       <div className="UserProfileUpperSide">
         <span className="UserFullName">Saydou keita</span>
         <img
@@ -75,6 +75,6 @@ export const UserProfile = () => {
         arm towards the viewer. Gregor then turned to look out the window at the
         Drops
       </p>
-    </>
+    </div>
   );
 };
