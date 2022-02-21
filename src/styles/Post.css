@@ -1,0 +1,12 @@
+.UserPost {
+  padding: 0 15px;
+  border: 1px solid gainsboro;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.UserPost__Title {
+}
+
+.UserPost__Description {
+}
