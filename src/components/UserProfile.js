@@ -1,5 +1,6 @@
 import "../styles/UserProfile.css";
 import { PostComponent } from "./Post";
+import { NewPostComponent } from "./NewPost";
 
 export const UserProfile = () => {
   return (
@@ -9,6 +10,7 @@ export const UserProfile = () => {
         avatarSrc="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
       />
       <div className="UserProfile_Posts">
+        <NewPostComponent />
         <PostComponent />
         <PostComponent />
         <PostComponent />
