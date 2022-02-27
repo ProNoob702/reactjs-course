@@ -2,30 +2,23 @@ import { useState } from "react";
 import "../styles/NewPost.css";
 
 export const NewPostComponent = (props) => {
-  const [localNewPost, setLocalNewPost] = useState({});
+  const [titleValue, setTitleValue] = useState();
+  const [descriptionValue, setDescriptionValue] = useState();
   const handleTitleChange = (event) => {
-    setLocalNewPost((prevState) => {
-      const newState = {
-        ...prevState,
-        title: event.target.value,
-      };
-      return newState;
-    });
+    setTitleValue(event.target.value);
   };
 
   const handleDescriptionChange = (event) => {
-    setLocalNewPost((prevState) => {
-      const newState = {
-        ...prevState,
-        description: event.target.value,
-      };
-      return newState;
-    });
+    setDescriptionValue(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.setNewPost(localNewPost);
+    const newPost = {
+      title: titleValue,
+      description: descriptionValue,
+    };
+    props.setNewPost(newPost);
   };
 
   return (
