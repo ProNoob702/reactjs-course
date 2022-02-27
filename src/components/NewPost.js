@@ -13,6 +13,9 @@ export const NewPostComponent = () => {
           <label for="description">Description:</label>
           <textarea id="description" rows={2} />
         </div>
+        <div className="newPost__actions">
+          <button type="submit">Add post</button>
+        </div>
       </form>
     </div>
   );
