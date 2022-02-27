@@ -1,3 +1,9 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .AppHeader {
   background: deepskyblue;
   color: white;
@@ -12,6 +18,7 @@
 
 .AppMain {
   padding: 15px;
+  flex: 1;
 }
 
 .AppFooter {
