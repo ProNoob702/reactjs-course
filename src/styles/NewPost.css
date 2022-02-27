@@ -5,20 +5,26 @@
 }
 
 .newPost form {
-  padding: 0 20px;
+  padding: 0px 20px 20px 20px;
 }
 
-.newPost__control input {
-  width: 100%;
-  flex-grow: 1;
+.newPost__control {
+  margin-top: 20px;
+}
+
+.newPost__control label {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100px;
+  float: left;
+}
+
+.newPost__control input,
+textarea {
   border-radius: 0.25rem;
   padding: 0.75rem;
   outline: none;
-  border: 2px solid rgb(47, 82, 224);
-  transition: 0.3s all ease;
+  border: 1px solid gainsboro;
   font-size: 1rem;
-}
-
-.newPost__control input::placeholder {
-  color: gray;
+  width: 300px;
 }
