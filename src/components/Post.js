@@ -1,7 +1,7 @@
 import "../styles/Post.css";
 
 export const PostComponent = (props) => {
-  if (!props.title) return null;
+  if (!props.title || !props.description) return null;
   return (
     <div className="UserPost">
       <div className="UserPost__content">
