@@ -1,5 +1,4 @@
 import "../styles/UserProfile.css";
-import { PostComponent } from "./Post";
 import { NewPostComponent } from "./NewPost";
 
 export const UserProfile = () => {
@@ -11,10 +10,6 @@ export const UserProfile = () => {
       />
       <div className="UserProfile_Posts">
         <NewPostComponent />
-        <PostComponent />
-        <PostComponent />
-        <PostComponent />
-        <PostComponent />
       </div>
     </div>
   );
