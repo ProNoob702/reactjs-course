@@ -1,11 +1,9 @@
 import { useState } from "react";
 import "../styles/NewPost.css";
-import { PostComponent } from "./Post";
 
-export const NewPostComponent = () => {
+export const NewPostComponent = (props) => {
   const [titleValue, setTitleValue] = useState();
   const [descriptionValue, setDescriptionValue] = useState();
-  const [newPost, setNewPost] = useState({});
   const handleTitleChange = (event) => {
     setTitleValue(event.target.value);
   };
@@ -20,7 +18,7 @@ export const NewPostComponent = () => {
       title: titleValue,
       description: descriptionValue,
     };
-    setNewPost(newPost);
+    props.setNewPost(newPost);
   };
 
   return (
@@ -43,7 +41,6 @@ export const NewPostComponent = () => {
           <button type="submit">Add post</button>
         </div>
       </form>
-      <PostComponent title={newPost.title} description={newPost.description} />
     </div>
   );
 };

@@ -1,7 +1,10 @@
+import { useState } from "react";
 import "../styles/UserProfile.css";
 import { NewPostComponent } from "./NewPost";
+import { PostComponent } from "./Post";
 
 export const UserProfile = () => {
+  const [newPost, setNewPost] = useState({});
   return (
     <div className="UserProfile">
       <UserProfileUpperSide
@@ -9,7 +12,14 @@ export const UserProfile = () => {
         avatarSrc="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
       />
       <div className="UserProfile_Posts">
-        <NewPostComponent />
+        <NewPostComponent setNewPost={setNewPost} />
+        <div className="LatestPost">
+          <h4 className="LatestPost__title">Latest post</h4>
+          <PostComponent
+            title={newPost.title}
+            description={newPost.description}
+          />
+        </div>
       </div>
     </div>
   );
