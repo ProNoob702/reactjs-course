@@ -4,8 +4,14 @@
   border: 1px solid gainsboro;
 }
 
+.newPost__title {
+  margin-left: 20px;
+}
+
 .newPost form {
   padding: 0px 20px 20px 20px;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .newPost__control {
