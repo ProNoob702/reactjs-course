@@ -13,13 +13,7 @@ export const UserProfile = () => {
       />
       <div className="UserProfile_Posts">
         <NewPostComponent setNewPost={setNewPost} />
-        <div className="LatestPost">
-          <h4 className="LatestPost__title">Latest post</h4>
-          <PostComponent
-            title={newPost.title}
-            description={newPost.description}
-          />
-        </div>
+        <LatestPost newPost={newPost} />
       </div>
     </div>
   );
@@ -34,6 +28,18 @@ const UserProfileUpperSide = (props) => {
         alt="profile img"
         src={props.avatarSrc}
       ></img>
+    </div>
+  );
+};
+
+const LatestPost = (props) => {
+  return (
+    <div className="LatestPost">
+      <h4 className="LatestPost__title">Latest post</h4>
+      <PostComponent
+        title={props.newPost.title}
+        description={props.newPost.description}
+      />
     </div>
   );
 };
