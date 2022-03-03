@@ -19,6 +19,9 @@ export const NewPostComponent = (props) => {
       description: descriptionValue,
     };
     props.setNewPost(newPost);
+    // do reset
+    setTitleValue(null);
+    setDescriptionValue(null);
   };
 
   return (
@@ -27,12 +30,18 @@ export const NewPostComponent = (props) => {
       <form onSubmit={handleSubmit}>
         <div className="newPost__control">
           <label for="title">Title:</label>
-          <input id="title" type="text" onChange={handleTitleChange} />
+          <input
+            id="title"
+            type="text"
+            value={titleValue}
+            onChange={handleTitleChange}
+          />
         </div>
         <div className="newPost__control">
           <label for="description">Description:</label>
           <textarea
             id="description"
+            value={descriptionValue}
             rows={2}
             onChange={handleDescriptionChange}
           />
