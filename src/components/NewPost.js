@@ -2,8 +2,8 @@ import { useState } from "react";
 import "../styles/NewPost.css";
 
 export const NewPostComponent = (props) => {
-  const [titleValue, setTitleValue] = useState("");
-  const [descriptionValue, setDescriptionValue] = useState("");
+  const [titleValue, setTitleValue] = useState();
+  const [descriptionValue, setDescriptionValue] = useState();
   const handleTitleChange = (event) => {
     setTitleValue(event.target.value);
   };
@@ -18,13 +18,10 @@ export const NewPostComponent = (props) => {
       title: titleValue,
       description: descriptionValue,
     };
-    props.setPosts((prevState) => {
-      const newArr = [...prevState, newPost];
-      return newArr;
-    });
+    props.setNewPost(newPost);
     // do reset
-    setTitleValue("");
-    setDescriptionValue("");
+    setTitleValue(null);
+    setDescriptionValue(null);
   };
 
   return (
@@ -32,7 +29,7 @@ export const NewPostComponent = (props) => {
       <h4 className="newPost__title">Add new post</h4>
       <form onSubmit={handleSubmit}>
         <div className="newPost__control">
-          <label htmlFor="title">Title:</label>
+          <label for="title">Title:</label>
           <input
             id="title"
             type="text"
@@ -41,7 +38,7 @@ export const NewPostComponent = (props) => {
           />
         </div>
         <div className="newPost__control">
-          <label htmlFor="description">Description:</label>
+          <label for="description">Description:</label>
           <textarea
             id="description"
             value={descriptionValue}
