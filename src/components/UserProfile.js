@@ -4,7 +4,7 @@ import { NewPostComponent } from "./NewPost";
 import { PostComponent } from "./Post";
 
 export const UserProfile = () => {
-  const [newPost, setNewPost] = useState({});
+  const [posts, setPosts] = useState([]);
   return (
     <div className="UserProfile">
       <UserProfileUpperSide
@@ -12,8 +12,8 @@ export const UserProfile = () => {
         avatarSrc="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
       />
       <div className="UserProfile_Posts">
-        <NewPostComponent setNewPost={setNewPost} />
-        <LatestPost newPost={newPost} />
+        <NewPostComponent setPosts={setPosts} />
+        <LatestPosts latestPosts={posts} />
       </div>
     </div>
   );
@@ -32,14 +32,11 @@ const UserProfileUpperSide = (props) => {
   );
 };
 
-const LatestPost = (props) => {
+const LatestPosts = (props) => {
+  console.log(props.latestPosts);
   return (
-    <div className="LatestPost">
-      <h4 className="LatestPost__title">Latest post</h4>
-      <PostComponent
-        title={props.newPost.title}
-        description={props.newPost.description}
-      />
+    <div className="LatestPosts">
+      <h4 className="LatestPosts__title">Latest posts</h4>
     </div>
   );
 };

@@ -20,12 +20,12 @@
   width: 100px;
 }
 
-.LatestPost {
+.LatestPosts {
   margin: 20px auto;
   width: 50%;
   border: 1px solid gainsboro;
 }
 
-.LatestPost__title {
+.LatestPosts__title {
   margin-left: 20px;
 }
