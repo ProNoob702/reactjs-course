@@ -8,6 +8,7 @@ export const LatestPosts = (props) => {
     </div>
   );
 };
+
 const LatestPostsContent = (props) => {
   if (props.latestPosts.length === 0) {
     return (
