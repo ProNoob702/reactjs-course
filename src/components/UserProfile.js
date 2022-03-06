@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/UserProfile.css";
+import { LatestPosts } from "./LatestPosts";
 import { NewPostComponent } from "./NewPost";
-import { PostComponent } from "./Post";
 import { UserProfileUpperSide } from "./UserProfileUpperSide";
 
 export const UserProfile = () => {
@@ -16,25 +16,6 @@ export const UserProfile = () => {
         <NewPostComponent setPosts={setPosts} />
         <LatestPosts latestPosts={posts} />
       </div>
-    </div>
-  );
-};
-
-const LatestPosts = (props) => {
-  return (
-    <div className="LatestPosts">
-      <h4 className="LatestPosts__title">Latest posts</h4>
-      {props.latestPosts.length === 0 ? (
-        <p className="LatestPosts__info">List is empty please add new post</p>
-      ) : (
-        props.latestPosts.map((lastesPostObj) => (
-          <PostComponent
-            key={lastesPostObj.id}
-            title={lastesPostObj.title}
-            description={lastesPostObj.description}
-          />
-        ))
-      )}
     </div>
   );
 };
