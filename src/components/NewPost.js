@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/NewPost.css";
+import uniqid from "uniqid";
 
 export const NewPostComponent = (props) => {
   const [titleValue, setTitleValue] = useState("");
@@ -14,7 +15,9 @@ export const NewPostComponent = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const postId = uniqid();
     const newPost = {
+      id: postId,
       title: titleValue,
       description: descriptionValue,
     };

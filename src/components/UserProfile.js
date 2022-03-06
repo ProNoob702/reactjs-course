@@ -33,11 +33,13 @@ const UserProfileUpperSide = (props) => {
 };
 
 const LatestPosts = (props) => {
+  console.log(props.latestPosts);
   return (
     <div className="LatestPosts">
       <h4 className="LatestPosts__title">Latest posts</h4>
       {props.latestPosts.map((lastesPostObj) => (
         <PostComponent
+          key={lastesPostObj.id}
           title={lastesPostObj.title}
           description={lastesPostObj.description}
         />
