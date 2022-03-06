@@ -33,17 +33,25 @@ const UserProfileUpperSide = (props) => {
 };
 
 const LatestPosts = (props) => {
-  console.log(props.latestPosts);
-  return (
-    <div className="LatestPosts">
-      <h4 className="LatestPosts__title">Latest posts</h4>
-      {props.latestPosts.map((lastesPostObj) => (
-        <PostComponent
-          key={lastesPostObj.id}
-          title={lastesPostObj.title}
-          description={lastesPostObj.description}
-        />
-      ))}
-    </div>
-  );
+  if (props.latestPosts.length === 0)
+    return (
+      <div className="LatestPosts">
+        <h4 className="LatestPosts__title">Latest posts</h4>
+        <p className="LatestPosts__info">List is empty please add new post</p>
+      </div>
+    );
+  else {
+    return (
+      <div className="LatestPosts">
+        <h4 className="LatestPosts__title">Latest posts</h4>
+        {props.latestPosts.map((lastesPostObj) => (
+          <PostComponent
+            key={lastesPostObj.id}
+            title={lastesPostObj.title}
+            description={lastesPostObj.description}
+          />
+        ))}
+      </div>
+    );
+  }
 };
